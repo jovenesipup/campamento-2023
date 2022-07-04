@@ -8,14 +8,17 @@ html, body {
 }
 
 body {
-    background: linear-gradient(-45deg, #39b2a0, #24035a, #ae07a8, #39b2a0, #24035a);
+    background: #24035a;
+    /* background: linear-gradient(-45deg, #39b2a0, #24035a, #ae07a8, #39b2a0, #24035a);
     background-size: 400% 400%;
-    animation: gradient 7s ease infinite;
+    background-position: 50% 100%; */
+    /* animation: gradient 7s ease infinite; */
 }
 
 @keyframes gradient {
     0% {
         background-position: 0% 100%;
+        color: #ae07a8
     }
     50% {
         background-position: 50% 100%;
