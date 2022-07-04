@@ -4,7 +4,7 @@ export default function input(props) {
   console.log(props)
   return (
     <div className='mb-6'>
-      <label htmlFor="price" className="block text-lg font-medium text-dark-lila">
+      <label htmlFor="price" className="block text-lg font-medium text-slate-50">
         {props.labelName}
       </label>
       <div className="mt-1 relative rounded-md shadow-sm">
@@ -15,7 +15,7 @@ export default function input(props) {
           type={props.type}
           name="price"
           id="price"
-          className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-slate-200"
+          className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-dark-lila/60"
           placeholder={props.placeholder}
           required={props.isRequired}
           maxLength={props.maxLength}

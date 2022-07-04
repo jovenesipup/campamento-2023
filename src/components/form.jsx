@@ -3,7 +3,7 @@ import Input from './input'
 
 export default function form() {
   return (
-    <div className='mt-8 shadow-sm shadow-slate-200 rounded-2xl bg-slate-50'>
+    <div className='mt-8 shadow-sm shadow-dark-lila rounded-2xl bg-dark-lila/70'>
         <div className='py-2 px-4 rounded-t-2xl bg-gradient-to-r to-light-green from-light-purple'>
             <h2 className='text-slate-200 text-xl font-light'>Estás a un solo paso...</h2>
         </div>
