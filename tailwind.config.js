@@ -9,6 +9,7 @@ module.exports = {
       padding: '2rem',
     },
     colors:{
+      transparent: 'transparent',
       'light-green': '#63c0a5',
       'dark-lila': '#0a1a33',
       'slate': {

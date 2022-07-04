@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function input(props) {
+  console.log(props)
   return (
     <div className='mb-6'>
       <label htmlFor="price" className="block text-lg font-medium text-dark-lila">
@@ -17,6 +18,7 @@ export default function input(props) {
           className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-slate-200"
           placeholder={props.placeholder}
           required={props.isRequired}
+          maxLength={props.maxLength}
         />
       </div>
     </div>
