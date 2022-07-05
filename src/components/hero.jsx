@@ -16,7 +16,6 @@ export default function hero() {
   const syncroVideo = () => {
       buttonPlay.current.classList.add('hidden')
       playVideo()
-      bannerVideo.current.muted = false
   }
 
   useEffect(() => {
@@ -25,6 +24,7 @@ export default function hero() {
     
     if(!isVideoPlaying){
       syncroVideo();
+      bannerVideo.current.muted = false
     }
 
   },[])
@@ -34,6 +34,7 @@ export default function hero() {
     const isVideoPlaying = !!(childVideo.currentTime > 0 && !childVideo.paused && !childVideo.ended && childVideo.readyState > 2);
     if(!isVideoPlaying){
       syncroVideo();
+      bannerVideo.current.muted = false
     }
     else{
       buttonPlay.current.classList.remove('hidden')
