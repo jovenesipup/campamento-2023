@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     container: {
-      padding: '2rem',
+      padding: '1.5rem',
     },
     colors:{
       transparent: 'transparent',
@@ -15,7 +15,11 @@ module.exports = {
       'slate': {
         50: '#f8fafc',
         100: '#f1f5f9',
-        200: '#e2e8f0'
+        200: '#e2e8f0',
+        300: '#cbd5e1',
+        400: '#94a3b8',
+        500: '#64748b',
+        600: '#475569'
       },
       'light-purple': '#ae07a8'
     }
