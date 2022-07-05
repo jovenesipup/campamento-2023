@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function input(props) {
-  console.log(props)
   return (
     <div className='mb-6'>
       <label htmlFor="price" className="block text-lg font-medium text-slate-50">
