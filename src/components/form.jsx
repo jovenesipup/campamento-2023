@@ -10,6 +10,8 @@ export default function form() {
     const res = await email.sendForm('service_wrwpolm','template_170x46c',form.current,'TsO_9UCu7fG8j9NaG')
       try {
         console.log(res)
+        alert("Mensaje enviado con exito")
+        window.location.reload()
         
       } catch (error) {
         console.log(error)
@@ -19,7 +21,7 @@ export default function form() {
   return (
     <div className='my-8 shadow-sm shadow-dark-lila rounded-2xl bg-dark-lila/70'>
         <div className='py-2 px-4 rounded-t-2xl bg-gradient-to-r to-light-green from-light-purple'>
-            <h2 className='text-slate-200 text-xl font-light'>Estás a un solo paso...</h2>
+            <h2 className='text-slate-50 text-xl font-light text-center'>REGISTRO</h2>
         </div>
         <div className='p-4'>
           <form ref={form} onSubmit={sendEmail}>

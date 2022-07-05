@@ -13,7 +13,7 @@ export default function input(props) {
         <input
           type={props.type}
           name={props.name}
-          id="price"
+          id={props.name}
           className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-dark-lila/60 text-slate-50 placeholder:text-slate-600"
           placeholder={props.placeholder}
           required={props.isRequired}
