@@ -51,6 +51,8 @@ export default function hero() {
         ref={bannerVideo}
         muted
         onClick={handlePlayVideo}
+        webkit-playsinline 
+        playsinline
       >
         <source
           src={VideoBanner}
