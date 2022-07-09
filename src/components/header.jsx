@@ -3,7 +3,7 @@ import Logo from '../assets/img/logo.png'
 
 export default function header() {
   return (
-    <header className='bg-dark-lila/70'>
+    <header className='bg-dark-lila/70 fixed z-10 w-full backdrop-blur-md'>
         <nav className='container w-full py-4 flex flex-row justify-between'>
             <div className='w-32'>
                 <img src={Logo} alt="logo" className=''/>
