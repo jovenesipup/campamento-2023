@@ -84,7 +84,7 @@ export default function home() {
               segun la necesidad, cuenta con areas verdes, auditorio,
               habitaciones y zonas recreacionales
             </p>
-            <Link to="/campamento-2023/galeria">
+            <Link to="/galeria">
               <button className="my-4 px-4 h-10 w-full uppercase text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10">
                 Ver Galeria
               </button>

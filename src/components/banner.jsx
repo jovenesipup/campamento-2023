@@ -18,7 +18,7 @@ export default function banner() {
                 <img src={Happy} alt="happy" className='w-40'/>
             </div>
         </div>
-        <Link to='/campamento-2023/registro'>
+        <Link to='/registro'>
             <button className='py-2 px-4 h-10 w-full uppercase text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10'>
                 Inscribete
             </button>
