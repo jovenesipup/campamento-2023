@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     container: {
       padding: '1.5rem',
+      margin: '0 auto'
     },
     colors:{
       transparent: 'transparent',

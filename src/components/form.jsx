@@ -33,6 +33,9 @@ export default function form() {
             <Input labelName='Apellidos' placeholder='Doe' type='text' isRequired='required' name='user_lastname'/>
             <Input labelName='Correo' placeholder='example@mail.com' type='email' isRequired='required' name='user_email'/>
             <Input labelName='Numero de contacto' placeholder='123456789' type='number' isRequired='required' maxLength={9} name='user_number'/>
+            <Input labelName='Iglesia' placeholder='Nombre de tu iglesia' type='text' isRequired='required' maxLength={9} name='user_iglesia'/>
+            <Input labelName='Pastor' placeholder='Nombre de tu pastor' type='text' isRequired='required' maxLength={9} name='user_pastor'/>
+            <Input labelName='Origen' placeholder='Seleccione Origen' type='text' isRequired='required' maxLength={9} name='user_documento'/>
             <button type='submit' className='w-full uppercase py-2 px-4 h-10 text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10'>Continuar</button>
           </form>
         </div>

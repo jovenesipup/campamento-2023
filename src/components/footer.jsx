@@ -3,7 +3,7 @@ import Logo from '../assets/img/logo.png'
 
 export default function footer() {
   return (
-    <footer className='bg-dark-lila/70'>
+    <footer className='bg-dark-lila/70 '>
         <div className='container py-4'>
             <div className=''>
                 <span className='text-slate-50'>Campamento Nacional de Jovenes - 2023</span>

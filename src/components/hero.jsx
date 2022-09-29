@@ -26,6 +26,9 @@ export default function hero() {
     if(!isVideoPlaying){
       syncroVideo();
       bannerVideo.current.muted = false
+    }else{
+      buttonPlay.current.classList.remove('hidden')
+      bannerVideo.current.pause()
     }
 
   },[])
@@ -48,10 +51,8 @@ export default function hero() {
       <div>
         <video
           id="video"
-          autoPlay
           className="w-full"
           ref={bannerVideo}
-          muted
           onClick={handlePlayVideo} 
           webkit-playsinline="true"
           playsInline
