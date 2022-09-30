@@ -15,7 +15,6 @@ export default function hero() {
   }
 
   const syncroVideo = () => {
-      buttonPlay.current.classList.add('hidden')
       playVideo()
   }
 
@@ -27,7 +26,6 @@ export default function hero() {
       syncroVideo();
       bannerVideo.current.muted = false
     }else{
-      buttonPlay.current.classList.remove('hidden')
       bannerVideo.current.pause()
     }
 
@@ -41,21 +39,25 @@ export default function hero() {
       bannerVideo.current.muted = false
     }
     else{
-      buttonPlay.current.classList.remove('hidden')
       bannerVideo.current.pause()
     }
   }
   
   return (
-    <div className="relative pt-20">
+    <div className="relative pt-20 lg:flex lg:container lg:pt-28 lg:pb-8 lg:justify-between">
+      <div className="">
+        <h1 className="hidden lg:block text-8xl text-slate-200 text-center font-bold">Te damos la bienvenida!</h1>
+        <p className="hidden lg:block text-2xl text-center text-slate-400 pt-8">Del 16 al 18 de Febrero</p>
+      </div>
       <div>
         <video
           id="video"
-          className="w-full"
+          className="w-full lg:max-w-4xl lg:rounded-lg lg:shadow-lg lg:shadow-light-green lg:border-4 lg:border-x-light-purple lg:border-y-light-green"
           ref={bannerVideo}
           onClick={handlePlayVideo} 
           webkit-playsinline="true"
           playsInline
+          controls
         >
           <source
             src={VideoBanner}
@@ -63,7 +65,7 @@ export default function hero() {
           />
           Your browser does not support the video tag.
         </video>
-        <button id="play-button" className="absolute z-20 top-0 bottom-0 right-[calc(50%-48px)] text-slate-50" ref={buttonPlay} onClick={handlePlayVideo}>
+        <button id="play-button" className="hidden absolute z-20 top-0 bottom-0 right-[calc(50%-48px)] text-slate-50" ref={buttonPlay} onClick={handlePlayVideo}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-24 text-center" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

@@ -5,6 +5,8 @@ import  Gracias  from "./pages/gracias";
 import Registro from './pages/registro'
 import Header from './components/header'
 import Admin from './pages/admin';
+import Footer from './components/footer';
+import Galeria from './pages/galeria';
 
 function App() {
   return (
@@ -14,9 +16,9 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/gracias' element={<Gracias/>}></Route>
           <Route path='/registro' element={<Registro/>}></Route>
-          <Route path='/admin' element={<Admin/>}></Route>
-
+          <Route path='/galeria' element={<Galeria/>}></Route>
         </Routes>
+        <Footer></Footer>
       </div>
   )
 }

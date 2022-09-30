@@ -20,7 +20,7 @@ export default function form() {
   }
     
   return (
-    <div className='my-8 shadow-sm shadow-slate-50/10 rounded-2xl bg-dark-lila/70'>
+    <div className='shadow-sm shadow-slate-50/10 rounded-2xl bg-dark-lila/70'>
         <div className='py-2 px-4 rounded-t-2xl bg-dark-lila/60'>
             <h2 className='text-slate-50 text-xl font-light text-center'>REGISTRO</h2>
         </div>
@@ -35,7 +35,8 @@ export default function form() {
             <Input labelName='Numero de contacto' placeholder='123456789' type='number' isRequired='required' maxLength={9} name='user_number'/>
             <Input labelName='Iglesia' placeholder='Nombre de tu iglesia' type='text' isRequired='required' maxLength={9} name='user_iglesia'/>
             <Input labelName='Pastor' placeholder='Nombre de tu pastor' type='text' isRequired='required' maxLength={9} name='user_pastor'/>
-            <Input labelName='Origen' placeholder='Seleccione Origen' type='text' isRequired='required' maxLength={9} name='user_documento'/>
+            {/* <Input labelName='Origen' placeholder='Seleccione Origen' type='text' isRequired='required' maxLength={9} name='user_documento'/>
+            <select name="" id=""></select> */}
             <button type='submit' className='w-full uppercase py-2 px-4 h-10 text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10'>Continuar</button>
           </form>
         </div>
