@@ -18,7 +18,7 @@ export default function home() {
       <div className="container py-6 bg-slate-50 max-w-full text-center lg:flex lg:bg-slate-300 lg:mt-10 lg:justify-between md:px-28 lg:px-36">
         <div className="lg:bg-dark-lila lg:rounded-lg lg:p-10 lg:max-h-56 my-auto lg:shadow-lg lg:shadow-light-green lg:border-4 lg:border-x-light-purple lg:border-y-light-green">
           <h2 className="text-light-green font-bold text-3xl">
-            Influencia Apostolica 2023
+            Influencia Apostólica 2023
           </h2>
           <span className="bg-clip-text font-bold text-slate-400 shadow-light-green">
             ¡Vive la experiencia!
@@ -35,7 +35,6 @@ export default function home() {
               >
                 <source src={IglesiaCuartaZona} type="video/mp4" />
               </video>
-              <p className="legend">Iglesia Cuarta Zona Collique</p>
             </div>
             <div>
               <video
@@ -46,7 +45,6 @@ export default function home() {
               >
                 <source src={IglesiaPanVida} type="video/mp4" />
               </video>
-              <p className="legend">Iglesia Pan de Vida</p>
             </div>
             <div>
               <video
@@ -57,7 +55,6 @@ export default function home() {
               >
                 <source src={IglesiaSanGabriel} type="video/mp4" />
               </video>
-              <p className="legend">Iglesia San Gabriel</p>
             </div>
           </Carousel>
           <p className="text-light-green pt-2 text-xl">

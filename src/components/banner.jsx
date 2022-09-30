@@ -12,7 +12,7 @@ export default function banner() {
             <h2 className='pt-4 uppercase text-slate-50 text-2xl lg:text-5xl'>
                 Campamento <span className='bg-clip-text font-bold text-transparent bg-gradient-to-r from-light-purple to-light-green'>Nacional</span> <span className='block pt-2 text-light-green drop-shadow-md'>2023</span>
                 <span className='text-xs italic'>#influenciaapostolica</span>
-                <p className='hidden lg:block text-slate-200 text-sm mt-6'>Estas a un solo paso de vivir la experiencia</p>
+                <p className='hidden lg:block text-slate-200 text-sm mt-6'>Estás a un solo paso de vivir la experiencia</p>
 
             </h2>
             <div className='w-40 lg:w-60'>
@@ -20,7 +20,7 @@ export default function banner() {
             </div>
         </div>
         <Link to='/registro'>
-            <button className='py-2 px-4 h-10 w-full uppercase text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10 lg:max-w-md'>
+            <button className='py-2 px-4 h-10 w-full uppercase text-dark-lila font-light rounded-2xl border border-yellow bg-yellow shadow shadow-slate-50/10 lg:max-w-md'>
                 Inscribete
             </button>
         </Link>

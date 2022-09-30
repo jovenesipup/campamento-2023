@@ -13,6 +13,7 @@ module.exports = {
       transparent: 'transparent',
       'light-green': '#63c0a5',
       'dark-lila': '#0a1a33',
+      'yellow': '#decb01',
       'slate': {
         50: '#f8fafc',
         100: '#f1f5f9',

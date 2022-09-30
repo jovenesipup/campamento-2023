@@ -1,6 +1,7 @@
 import React from "react";
 import VideoBanner from "../assets/video/gracias.mp4";
 import Consulta from "../assets/img/consulta.svg";
+import Modal from "../components/modal";
 
 import { Link } from "react-router-dom";
 
@@ -48,6 +49,7 @@ export default function gracias() {
           </button>
         </Link>
       </div>
+      <Modal></Modal>
     </div>
   );
 }
