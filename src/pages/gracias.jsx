@@ -2,10 +2,16 @@ import React from "react";
 import VideoBanner from "../assets/video/gracias.mp4";
 import Consulta from "../assets/img/consulta.svg";
 import Modal from "../components/modal";
+import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
 export default function gracias() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  
   return (
     <div>
       <div className="relative py-20 lg:flex lg:container lg:pt-28 lg:pb-8 lg:justify-between">
