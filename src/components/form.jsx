@@ -21,7 +21,7 @@ export default function form() {
   const validatedDni = async () => {
     const dni = form.current.querySelector("#user_dni").value;
     const res = await axios.get(
-      `http://85.208.22.216:3001/api/personas/dni/${dni}`
+      `https://campamentoapi.pro/api/personas/dni/${dni}`
     );
     if (res.data.length < 1) {
       sendForm();
@@ -45,7 +45,7 @@ export default function form() {
     };
     console.log(formBody);
     const res = await axios
-      .post("http://85.208.22.216:3001/api", {
+      .post("https://campamentoapi.pro/api", {
         nombre: formBody.name,
         apellidos: formBody.lastname,
         telefono: formBody.cellphone,
