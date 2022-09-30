@@ -1,16 +1,14 @@
 import React from "react";
-import Banner from "../components/banner";
-import Hero from "../components/hero";
-import Footer from "../components/footer";
-import Form from "../components/form";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
+import Camen from "../assets/img/5.jpg";
 import IglesiaCuartaZona from "../assets/video/i-cuarta-zona.mp4";
 import IglesiaPanVida from "../assets/video/i-pan-vida.mp4";
 import IglesiaSanGabriel from "../assets/video/i-san-gabriel.mp4";
 import Musicos from "../assets/video/musicos.mp4";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Camen from "../assets/img/camen.png";
-import { Link } from "react-router-dom";
+import Banner from "../components/banner";
+import Hero from "../components/hero";
 
 export default function home() {
   return (
@@ -63,13 +61,13 @@ export default function home() {
             </div>
           </Carousel>
           <p className="text-light-green pt-2 text-xl">
-            Ellos estan listos, y tu, ¿Lo estas?
+            Ellos estón listos, y tú, ¿Lo estás?
           </p>
         </div>
       </div>
       <div className="container py-6 max-w-full md:px-28 lg:px-36">
-        <div className="rounded-lg flex justify-between">
-          <img className="rounded-lg" src={Camen} alt="logo campapento" />
+        <div className="rounded-lg flex flex-col sm:flex-row justify-between">
+          <img className="rounded-lg max-w-xs object-cover " src={Camen} alt="logo campapento" />
           <div className="pl-4 lg:pl-48">
             <h2 className="text-slate-50 text-3xl pb-4">
               Sobre el lugar de campamento
@@ -77,11 +75,11 @@ export default function home() {
 
             <p className="text-slate-300 text-md">
               La comodidad es importante, asi que hemos escogido un gran lugar
-              para este proposito.
+              para este propósito.
             </p>
             <p className="text-slate-300 text-md">
               El Campamento Camen ofrece un amplio lugar con diferentes areas de
-              segun la necesidad, cuenta con areas verdes, auditorio,
+              según la necesidad, cuenta con áreas verdes, auditorio,
               habitaciones y zonas recreacionales
             </p>
             <Link to="/">
@@ -98,7 +96,7 @@ export default function home() {
             ¡Nos estamos preparando para dar lo mejor para Dios!
           </h2>
           <p className="text-slate-300 text-lg pb-4 lg:text-dark-lila">
-            Nuestro grupo Nacional De Alabanza de Lima esta dando lo mejor para
+            Nuestro grupo De Alabanza esta dando lo mejor para
             ese gran evento
           </p>
         </div>

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function gracias() {
   return (
     <div>
-      <div className="relative pt-20 lg:flex lg:container lg:pt-28 lg:pb-8 lg:justify-between">
+      <div className="relative py-20 lg:flex lg:container lg:pt-28 lg:pb-8 lg:justify-between">
         <div className="">
           <h1 className="hidden lg:block text-6xl text-slate-200 text-center font-bold">
             Gracias por haberte registrado
@@ -29,11 +29,11 @@ export default function gracias() {
           </video>
         </div>
       </div>
-      <div className="container py-8 max-w-full flex flex-col justify-between bg-dark-lila lg:px-48">
+      <div className="container py-8 mb-24 max-w-full flex flex-col justify-between bg-dark-lila lg:px-48">
         <div className="pb-4 flex flex-row justify-between">
           <h2 className="pt-4  text-slate-50 text-2xl lg:text-5xl">
             Como va mi cupo
-            <p className="hidden lg:block text-slate-200 text-lg mt-6">
+            <p className=" text-slate-200 text-lg mt-6">
               Puedes hacer seguimiento a tu registro dando click al siguiente boton
             </p>
             <span className="text-xs italic">#influenciaapostolica</span>
