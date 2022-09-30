@@ -4,7 +4,7 @@ import Joven from '../assets/img/joven.jpg'
 
 export default function registro() {
   return (
-    <div className="container mx-auto lg:px-16">
+    <div className="container backdrop-blur-3xl mx-auto lg:px-16">
       <div className="py-36 lg:flex lg:justify-between ">
         <div className="lg:max-w-lg">
           <h1 className="text-slate-50 text-4xl font-bold lg:text-5xl">Muy bien! Estas muy cera</h1>
