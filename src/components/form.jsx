@@ -144,7 +144,7 @@ export default function form() {
             placeholder="Nombre de tu iglesia"
             type="text"
             isRequired="required"
-            maxLength={9}
+            maxLength={90}
             name="user_iglesia"
           />
           <Input
@@ -152,7 +152,7 @@ export default function form() {
             placeholder="Nombre de tu pastor"
             type="text"
             isRequired="required"
-            maxLength={9}
+            maxLength={90}
             name="user_pastor"
           />
           <div className="mb-6">
