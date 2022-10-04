@@ -14,7 +14,7 @@ export default function form() {
 
   const savePerson = (e) => {
     e.preventDefault();
-    setIsLoad(true)
+    setIsLoad(true);
     validatedDni();
   };
 
@@ -27,7 +27,7 @@ export default function form() {
       sendForm();
     } else {
       alert("El DNI ya se encuentra registrado");
-      setIsLoad(false)
+      setIsLoad(false);
     }
   };
 
@@ -42,6 +42,10 @@ export default function form() {
       pastor: formEl.querySelector("#user_pastor").value,
       origin: formEl.querySelector("#user_origen").value,
       dni: formEl.querySelector("#user_dni").value,
+      ninos: formEl.querySelector("#user_ninos").value,
+      civil: formEl.querySelector("#user_civil").value,
+      talla: formEl.querySelector("#user_talla").value,
+      genero: formEl.querySelector("#user_genero").value
     };
     console.log(formBody);
     const res = await axios
@@ -55,11 +59,16 @@ export default function form() {
         origen: formBody.origin,
         estado: "pendiente",
         dni: formBody.dni,
+        ninos: formBody.ninos || 0,
+        civil: formBody.civil,
+        talla: formBody.talla,
+        genero: formBody.genero
       })
       .then(function (response) {
         console.log(response);
-        alert("Registro Exitoso");
         sendEmail();
+        alert("Registro Exitoso");
+        navigate("/gracias");
       })
       .catch(function (error) {
         console.log(error);
@@ -75,8 +84,7 @@ export default function form() {
     );
     try {
       console.log(res);
-      setIsLoad(false)
-      navigate("/gracias");
+      setIsLoad(false);
     } catch (error) {
       console.log(error);
     }
@@ -103,6 +111,9 @@ export default function form() {
           <img src={JoinImage} alt="join register" className="w-40 mx-auto" />
         </div>
         <form ref={form} onSubmit={savePerson}>
+          <p className="text-slate-50 text-xl font-bold text-center py-4">
+            Datos Personales
+          </p>
           <Input
             labelName="Nombre"
             placeholder="John"
@@ -139,6 +150,93 @@ export default function form() {
             maxLength={9}
             name="user_number"
           />
+          <div className="mb-6">
+            <label
+              htmlFor="price"
+              className="block text-lg font-medium text-slate-50"
+            >
+              Estado civil
+            </label>
+            <div className="mt-1 relative rounded-md shadow-sm">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <span className="text-gray-500 sm:text-sm"></span>
+              </div>
+              <select
+                className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-dark-lila/60 text-slate-50 placeholder:text-slate-600"
+                required
+                name="user_civil"
+                id="user_civil"
+              >
+                <option value="">Seleccione</option>
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+              </select>
+            </div>
+          </div>
+          <Input
+            labelName="Niños menores de 2 años (Opcional)"
+            placeholder="Cantidad"
+            type="number"
+            maxLength={9}
+            name="user_ninos"
+            minValue={0}
+          />
+
+
+          <div className="flex flex-row justify-items-stretch">
+            <div className="mb-6 w-full pr-3">
+              <label
+                htmlFor="price"
+                className="block text-lg font-medium text-slate-50"
+              >
+                Género
+              </label>
+              <div className="mt-1 relative rounded-md shadow-sm">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <span className="text-gray-500 sm:text-sm"></span>
+                </div>
+                <select
+                  className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-dark-lila/60 text-slate-50 placeholder:text-slate-600"
+                  required
+                  name="user_genero"
+                  id="user_genero"
+                >
+                  <option value="">Seleccione</option>
+                  <option value="M">M</option>
+                  <option value="F">F</option>
+                </select>
+              </div>
+            </div>
+            <div className="mb-6 w-full">
+              <label
+                htmlFor="price"
+                className="block text-lg font-medium text-slate-50"
+              >
+                Talla
+              </label>
+              <div className="mt-1 relative rounded-md shadow-sm">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <span className="text-gray-500 sm:text-sm"></span>
+                </div>
+                <select
+                  className="block w-full pl-4 pr-12 py-2 rounded-2xl text-lg bg-dark-lila/60 text-slate-50 placeholder:text-slate-600"
+                  required
+                  name="user_talla"
+                  id="user_talla"
+                >
+                  <option value="">Seleccione</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-slate-50 text-xl font-bold text-center py-4">
+            Datos de tu iglesia
+          </p>
           <Input
             labelName="Iglesia"
             placeholder="Nombre de tu iglesia"
@@ -178,7 +276,6 @@ export default function form() {
               </select>
             </div>
           </div>
-
           <button
             type="submit"
             className="w-full uppercase py-2 px-4 h-10 text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10"

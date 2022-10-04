@@ -58,7 +58,7 @@ export default function home() {
             </div>
           </Carousel>
           <p className="text-light-green pt-2 text-xl">
-            Ellos estón listos, y tú, ¿Lo estás?
+            Ellos están listos, y tú, ¿Lo estás?
           </p>
         </div>
       </div>

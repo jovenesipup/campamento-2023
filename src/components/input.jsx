@@ -18,6 +18,7 @@ export default function input(props) {
           placeholder={props.placeholder}
           required={props.isRequired}
           maxLength={props.maxLength}
+          min={props.minValue}
         />
       </div>
     </div>
