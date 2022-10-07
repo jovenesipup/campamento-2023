@@ -49,7 +49,7 @@ export default function gracias() {
             <img src={Consulta} alt="happy" className="w-40 lg:w-60" />
           </div>
         </div>
-        <Link to="/">
+        <Link to="/consulta">
           <button className="py-2 px-4 h-10 w-full uppercase text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10 lg:max-w-md">
             Consultar
           </button>

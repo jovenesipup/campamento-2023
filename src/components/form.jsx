@@ -47,7 +47,6 @@ export default function form() {
       talla: formEl.querySelector("#user_talla").value,
       genero: formEl.querySelector("#user_genero").value
     };
-    console.log(formBody);
     const res = await axios
       .post("https://campamentoapi.pro/api", {
         nombre: formBody.name,
@@ -65,7 +64,6 @@ export default function form() {
         genero: formBody.genero
       })
       .then(function (response) {
-        console.log(response);
         sendEmail();
         alert("Registro Exitoso");
         navigate("/gracias");
@@ -83,7 +81,6 @@ export default function form() {
       "TsO_9UCu7fG8j9NaG"
     );
     try {
-      console.log(res);
       setIsLoad(false);
     } catch (error) {
       console.log(error);

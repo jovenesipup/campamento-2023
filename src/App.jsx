@@ -7,9 +7,7 @@ import Header from './components/header'
 import Admin from './pages/admin';
 import Footer from './components/footer';
 import Galeria from './pages/galeria';
-import ReactGA from 'react-ga';
-// const TRACKING_ID = "G-X56F4K2BP4"; // OUR_TRACKING_ID
-// ReactGA.initialize(TRACKING_ID);
+import Consulta from './pages/consulta';
 
 function App() {
   return (
@@ -20,6 +18,7 @@ function App() {
           <Route path='/gracias' element={<Gracias/>}></Route>
           <Route path='/registro' element={<Registro/>}></Route>
           <Route path='/galeria' element={<Galeria/>}></Route>
+          <Route path='/consulta' element={<Consulta/>}></Route>
         </Routes>
         <Footer></Footer>
       </div>

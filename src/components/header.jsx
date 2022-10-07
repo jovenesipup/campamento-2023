@@ -30,11 +30,11 @@ export default function header() {
                 Inicio
               </li>
             </Link>
-            {/* <Link to="/consulta">
+            <Link to="/consulta">
               <li className="ml-6 cursor-pointer hover:border-b-2 w-fit border-slate-50">
                 Consultar mi cupo
               </li>
-            </Link> */}
+            </Link>
             <Link to="/registro">
               <li className="ml-6 cursor-pointer hover:border-b-2 w-fit border-slate-50">
                 Registro
@@ -88,11 +88,11 @@ export default function header() {
                 Inicio
               </li>
             </Link>
-            {/* <Link to="/consulta" onClick={() => handleMenu(false)}>
+            <Link to="/consulta" onClick={() => handleMenu(false)}>
               <li className="mb-8 flex items-center cursor-pointer border-b-2 w-fit border-slate-50">
                 Consultar mi cupo
               </li>
-            </Link> */}
+            </Link>
             <Link to="/registro" onClick={() => handleMenu(false)}>
               <li className="mb-8 flex items-center cursor-pointer border-b-2 w-fit border-slate-50">
                 Registro
