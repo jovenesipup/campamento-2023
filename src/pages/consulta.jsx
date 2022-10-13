@@ -25,6 +25,7 @@ export default function consulta() {
     const res = await axios.get(
       `https://campamentoapi.pro/api/personas/dni/${dni}`
     );
+    window.scrollTo(0, 0);
     if (res.data.length < 1) {
       setModalCont(0);
     } else {
