@@ -163,7 +163,7 @@ export default function consulta() {
             Gracias por haberte registrado
           </h1>
           <p className="text-slate-50 text-xl py-8 lg:font-bold lg:text-2xl">
-            Puedes seguir el estado de tu cupo acá, solo coloca tu correo y DNI.
+            Puedes seguir el estado de tu cupo acá, solo coloca tu DNI.
           </p>
           <img
             src={Joven}
@@ -196,20 +196,20 @@ export default function consulta() {
                 />
               </div>
               <form ref={form} onSubmit={consultaCupo}>
-                <Input
+                {/* <Input
                   labelName="Correo"
                   placeholder="example@emael.com"
                   type="email"
                   isRequired="required"
                   name="user_email"
-                />
-                {/* <Input
+                /> */}
+                <Input
                   labelName="DNI"
                   placeholder="123456789"
                   type="text"
                   isRequired="required"
                   name="user_dni"
-                /> */}
+                />
                 <button
                   type="submit"
                   className="w-full uppercase py-2 px-4 h-10 text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10"
