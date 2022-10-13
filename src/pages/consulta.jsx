@@ -203,13 +203,13 @@ export default function consulta() {
                   isRequired="required"
                   name="user_email"
                 />
-                <Input
+                {/* <Input
                   labelName="DNI"
                   placeholder="123456789"
                   type="text"
                   isRequired="required"
                   name="user_dni"
-                />
+                /> */}
                 <button
                   type="submit"
                   className="w-full uppercase py-2 px-4 h-10 text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10"
