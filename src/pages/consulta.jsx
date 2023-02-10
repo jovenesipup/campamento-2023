@@ -12,6 +12,7 @@ import Neutro from "../assets/img/neutro.svg";
 import Triste from "../assets/img/triste.svg";
 import MuyFeliz from "../assets/img/muyfeliz.svg";
 import Close from "../assets/img/close.svg";
+import QRCode from "react-qr-code";
 
 export default function consulta() {
   const [modalCont, setModalCont] = useState(0);
@@ -106,7 +107,7 @@ export default function consulta() {
                   className="bg-gradient-to-r to-light-green from-light-purple h-4 rounded-xl"
                   style={
                     (dataModal.estado == "pendiente" && { width: "10%" }) ||
-                    (dataModal.estado == "separado"  && { width: "50%" }) ||
+                    (dataModal.estado == "separado" && { width: "50%" }) ||
                     (dataModal.estado == "separado125" && { width: "50%" }) ||
                     (dataModal.estado == "separado135" && { width: "50%" }) || {
                       width: "100%",
@@ -124,17 +125,33 @@ export default function consulta() {
               <p className="text-sm font-bold">
                 Estado:{" "}
                 <span className="first-letter:uppercase">
-                  {dataModal.estado == 'pendiente' && "pendiente" || dataModal.estado == "separado" && 'Separado' || dataModal.estado == "separado125" && 'Separado' || dataModal.estado == 'separado135' && "Separado" || "Completado"}
+                  {(dataModal.estado == "pendiente" && "pendiente") ||
+                    (dataModal.estado == "separado" && "Separado") ||
+                    (dataModal.estado == "separado125" && "Separado") ||
+                    (dataModal.estado == "separado135" && "Separado") ||
+                    "Completado"}
                 </span>
               </p>
             </div>
             <p className="text-lg pt-4">
               {(dataModal.estado == "pendiente" &&
                 "Tu cupo aún está pendiente, para poder separarlo haz el pago dando en el botón de abajo.") ||
-                (dataModal.estado == "separado" && "Muy bien! ya has asegurado tu entrada al campamento, sólo falta completar el monto de tu pago y habrás completado todos los pasos" || dataModal.estado == "separado125" && "Muy bien! ya has asegurado tu entrada al campamento, sólo falta completar el monto de tu pago y habrás completado todos los pasos" || dataModal.estado == "separado135" &&
+                (dataModal.estado == "separado" &&
+                  "Muy bien! ya has asegurado tu entrada al campamento, sólo falta completar el monto de tu pago y habrás completado todos los pasos") ||
+                (dataModal.estado == "separado125" &&
+                  "Muy bien! ya has asegurado tu entrada al campamento, sólo falta completar el monto de tu pago y habrás completado todos los pasos") ||
+                (dataModal.estado == "separado135" &&
                   "Muy bien! ya has asegurado tu entrada al campamento, sólo falta completar el monto de tu pago y habrás completado todos los pasos") ||
                 "Muchas gracias por completar el proceso, nos vemos en Febrero 2023"}
             </p>
+            <QRCode
+                size={256}
+                style={{ height: "auto", maxWidth: "200px", width: "200px", margin: "0 auto", marginTop: "10px" }}
+                value={dataModal.dni}
+                viewBox={`0 0 256 256`}
+                fgColor={'#0a1a33'}
+              />
+
             <div className="pt-4 underline text-light-purple font-bold ">
               {(dataModal.estado == "pendiente" && (
                 <a
@@ -144,7 +161,9 @@ export default function consulta() {
                   Ir a pagar
                 </a>
               )) ||
-                ((dataModal.estado == "separado" || dataModal.estado == "separado125" || dataModal.estado == "separado135") && (
+                ((dataModal.estado == "separado" ||
+                  dataModal.estado == "separado125" ||
+                  dataModal.estado == "separado135") && (
                   <a
                     target={"_blank"}
                     href="https://wa.me/51981257046?text=Hola%20quiero%20continuar%20con%20el%20pago%20de%20mi%20cupo%20para%20el%20campamento%202023"

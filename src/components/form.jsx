@@ -65,7 +65,8 @@ export default function form() {
         talla: formBody.talla,
         genero: formBody.genero,
         infante: formBody.infante,
-        edad: formBody.edad
+        edad: formBody.edad,
+        hospeda: 'cabana'
       })
       .then(function (response) {
         sendEmail();
