@@ -138,7 +138,7 @@ export default function consulta() {
       )) ||
         (modalOpen && modalCont != 0 && (
           <div>
-            {dataModal.estado == "pendiente" && !dataModal.weiPoint && openBus && (
+            {dataModal.estado != "pendiente" && !dataModal.weiPoint && openBus && (
               <ModalBus>
                 {isLoad && (
                   <div className="absolute top-0 left-0 w-full h-full z-50 bg-dark-lila/50 rounded-2xl">
