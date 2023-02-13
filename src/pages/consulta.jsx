@@ -162,9 +162,9 @@ export default function consulta() {
                     onClick={() => setSelectPoint("1")}
                   >
                     {selectPoint == "1" && (
-                      <span class="material-symbols-rounded absolute right-1 text-light-purple font-bold">
+                      <i class="material-symbols-rounded absolute right-1 text-light-purple font-bold">
                         task_alt
-                      </span>
+                      </i>
                     )}
                     <p className="text-lg font-bold">IGLESIA PAN DE VIDA </p>
                     <p className="text-sm">
@@ -214,9 +214,9 @@ export default function consulta() {
                     onClick={() => setSelectPoint("2")}
                   >
                     {selectPoint == "2" && (
-                      <span class="material-symbols-rounded absolute right-1 text-light-purple font-bold">
+                      <i class="material-symbols-rounded absolute right-1 text-light-purple font-bold">
                         task_alt
-                      </span>
+                      </i>
                     )}
                     <p className="text-lg font-bold">
                       IGLESIA JESUCRISTO ES LA VERDAD{" "}
@@ -269,9 +269,9 @@ export default function consulta() {
                     onClick={() => setSelectPoint("3")}
                   >
                     {selectPoint == "3" && (
-                      <span class="material-symbols-rounded absolute right-1 text-light-purple font-bold">
+                      <i class="material-symbols-rounded absolute right-1 text-light-purple font-bold">
                         task_alt
-                      </span>
+                      </i>
                     )}
                     <p className="text-lg font-bold">IGLESIA IPUP MOTUPE </p>
                     <p className="text-sm">Dirección: Paradero 4 de Wise</p>
