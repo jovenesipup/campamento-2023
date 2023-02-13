@@ -44,7 +44,6 @@ export default function form() {
       dni: formEl.querySelector("#user_dni").value,
       ninos: formEl.querySelector("#user_ninos").value,
       civil: formEl.querySelector("#user_civil").value,
-      talla: formEl.querySelector("#user_talla").value,
       genero: formEl.querySelector("#user_genero").value,
       infante: formEl.querySelector("#user_infante").value,
       edad: formEl.querySelector("#user_edad").value
@@ -62,7 +61,7 @@ export default function form() {
         dni: formBody.dni,
         ninos: formBody.ninos || 0,
         civil: formBody.civil,
-        talla: formBody.talla,
+        talla: "N/A",
         genero: formBody.genero,
         infante: formBody.infante,
         edad: formBody.edad,
@@ -240,7 +239,7 @@ export default function form() {
                 </select>
               </div>
             </div>
-            <div className="mb-6 w-full">
+            {/* <div className="mb-6 w-full hidden">
               <label
                 htmlFor="price"
                 className="block text-lg font-medium text-slate-50"
@@ -264,7 +263,7 @@ export default function form() {
                   <option value="XL">XL</option>
                 </select>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <p className="text-slate-50 text-xl font-bold text-center py-4">
