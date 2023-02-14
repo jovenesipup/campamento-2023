@@ -154,7 +154,7 @@ export default function consulta() {
                   A continuación indícanos el punto de salida donde vas a estar:
                 </h4>
                 <div className="pt-6">
-                  <div
+                  {/* <div
                     className={`relative cursor-pointer mb-4 border-solid ${
                       (selectPoint == "1" && "border-light-purple border-4") ||
                       "border-dark-lila/30 border-2"
@@ -205,7 +205,7 @@ export default function consulta() {
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
-                  </div>
+                  </div> */}
                   <div
                     className={`relative cursor-pointer mb-4 border-solid ${
                       (selectPoint == "2" && "border-light-purple border-4") ||
