@@ -310,6 +310,7 @@ export default function form() {
           </div>
           <button
             type="submit"
+            disabled
             className="w-full uppercase py-2 px-4 h-10 text-light-green font-light rounded-2xl border border-light-green shadow shadow-slate-50/10"
           >
             Continuar
