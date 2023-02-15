@@ -7,7 +7,7 @@ import Triste from "../assets/img/triste.svg";
 import { useState } from "react";
 
 export default function registro() {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="container backdrop-blur-3xl mx-auto lg:px-16">
